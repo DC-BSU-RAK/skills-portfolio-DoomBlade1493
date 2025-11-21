@@ -1,0 +1,101 @@
+# Cyberpunk: Math Protocol
+
+Welcome, Operator. Your neural link is now online. Solve sequences of math problems to breach nodes and capture data. Precision and speed are critical.
+
+---
+
+## Objective
+
+- Solve a sequence of math problems to successfully **BREACH** nodes.
+- Each correct answer captures data and increases your **Trace Data** score.
+- Complete all 10 nodes to finish the simulation.
+- Achieve the highest score possible to earn the top performance rank.
+
+---
+
+## Security Levels (Difficulty)
+
+Choose your BREACH protocol:
+
+1. **LOW SECURITY (Easy)**
+   - Numbers: 0–9
+   - Timer: None (unlimited time)
+   - Operations: +, -, ×, ÷
+
+2. **MEDIUM SECURITY (Moderate)**
+   - Numbers: 10–99
+   - Timer: 12 seconds per node
+   - Operations: +, -, ×, ÷
+   - Failing or slow responses triggers node failure
+
+3. **HIGH SECURITY (Advanced)**
+   - Numbers: 100–999
+   - Timer: 16 seconds per node
+   - Operations: +, -, ×, ÷
+   - Requires rapid and accurate calculations; multiple failures reduce your score
+
+---
+
+## Interface Overview
+
+- **NODE MATRIX**: Left panel showing simulated hex traces (visual only).  
+- **BREACH INTERFACE (center)**:
+  - **Question Label**: Displays the current math problem.
+  - **Progress Label**: Shows your current node (e.g., `Sequence: 3 / 10`).
+  - **Timer Bar**: Countdown for Medium and High Security nodes.
+  - **Entry Box**: Type your answer here. Press **Enter** or **DEPLOY ANSWER** to submit.
+  - **TERMINATE SESSION**: Abort the current BREACH and return to the menu.
+- **Feedback Panel (Right)**: Displays node status and error messages.
+
+---
+
+## Rules for Answering
+
+- Only **integer values** are accepted. Invalid inputs trigger a warning.
+- **Correct Answer**:
+  - First attempt: +10 points
+  - Second attempt (if first attempt was wrong): +5 points
+  - Feedback: “Status: Node cracked. Data captured.”
+- **Incorrect Answer**:
+  - First attempt: Retry allowed; feedback shows number of attempts.
+  - Second attempt or timeout: Node fails, and a failure sound is played.
+- **Timer Expiration**:
+  - Medium & High Security nodes have a countdown.
+  - If time runs out, the node automatically fails.
+
+---
+
+## Scoring & Ranks
+
+- Maximum score: 100 points (10 nodes × 10 points each)
+- Performance ranks:
+  - **S** – 100 points
+  - **A+** – 90–99 points
+  - **A** – 80–89 points
+  - **B** – 70–79 points
+  - **C** – 60–69 points
+  - **D** – 50–59 points
+  - **F** – below 50 points
+- Rank is displayed at the end of the simulation along with total score.
+
+---
+
+## Tips for Operators
+
+- Plan your answer before typing; high-security nodes are fast.
+- Use mental shortcuts for multiplication and division.
+- Watch the timer closely; mistakes waste seconds.
+- Only integers are valid; decimals or fractions are rejected.
+- Two attempts per node maximum. After that, the node fails.
+
+---
+
+## Game Flow
+
+1. Launch the game.
+2. Select a BREACH protocol: Easy, Moderate, or High.
+3. The node grid displays a randomized “TRACE ID” for immersion.
+4. Solve each math problem within the time limit (if applicable).
+5. Monitor feedback and progress.
+6. Complete all 10 nodes to receive your score and performance rank.
+7. Optionally, return to the menu to try a different BREACH protocol.

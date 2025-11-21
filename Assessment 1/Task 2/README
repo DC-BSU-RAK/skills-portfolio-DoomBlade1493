@@ -1,0 +1,44 @@
+Codec Jokes – How to Use
+
+1. Make sure you have Python 3 installed.
+
+
+2. Put all files in the same folder:
+
+codec_jokes.py (the program)
+
+randomJokes.txt (your jokes)
+
+Faces/1.jpg … Faces/8.jpg (caller images)
+
+BGM.mp3 (background music)
+
+Codec.wav (joke sound)
+
+Laugh.wav (punchline laugh)
+
+Icon.ico (app icon)
+
+
+
+3. Run codec_jokes.py with Python.
+
+
+4. Click buttons to interact:
+
+ALEXA TELL ME A JOKE – Shows a new joke and plays a joke sound.
+
+SHOW PUNCHLINE – Shows the punchline and plays a laugh.
+
+NEXT JOKE – Skips to a new joke.
+
+QUIT – Closes the app.
+
+
+
+5. Each joke in randomJokes.txt should be written as:
+
+Setup?Punchline
+
+
+6. Enjoy the jokes with faces and sounds!
