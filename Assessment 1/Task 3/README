@@ -1,0 +1,116 @@
+Ultravista Academy • Student Manager – Quick Start Guide
+
+I. Launching the App
+
+Double-click the student_manager.py file (or whatever you named it).
+
+The main window opens with a sidebar menu and a student table.
+
+
+
+---
+
+II. Viewing Students
+
+View All: Shows the total number of students and the average percentage.
+
+View Individual: Enter a student code to see their full record.
+
+Highest/Lowest Overall: Instantly see the top and bottom performers.
+
+
+
+---
+
+III. Searching & Filtering
+
+Type a name or code in the Search box.
+
+Click Clear to remove the filter and see all students again.
+
+
+
+---
+
+IV. Adding a Student
+
+1. Click Add Student.
+
+
+2. A mini-game pops up – press the arrow keys in the correct sequence to unlock the form.
+
+
+3. Fill in Code, Name, CW1-3, and Exam marks.
+
+
+4. Click Save. The student is added, stats updated automatically.
+
+
+
+
+---
+
+V. Updating a Student
+
+1. Select a row in the table.
+
+
+2. Click Update Student (or double-click the row).
+
+
+3. Complete the mini-game to unlock editing.
+
+
+4. Edit the fields and click Save.
+
+
+
+
+---
+
+VI. Deleting a Student
+
+1. Select the student in the table.
+
+
+2. Click Delete Student.
+
+
+3. Complete the mini-game to confirm deletion.
+
+
+4. Confirm in the popup.
+
+
+VII. Sorting Records
+
+Click Sort Records.
+
+Enter asc (ascending) or desc (descending) to sort by overall %.
+
+
+VIII. Exporting Data
+
+Click Export CSV.
+
+Choose a file location and name.
+
+All student records are exported in a CSV file.
+
+
+IX. Stats & Cards
+
+Total Students: Number of students loaded.
+
+Average %: Class average.
+
+Top/Lowest Student: Name and code of top/bottom performers.
+
+
+Tips
+
+Student Codes must be 1000–9999.
+
+CW1–3 marks: 0–20, Exam: 0–100.
+
+Mini-game prevents accidental edits – follow the arrow key prompts.
