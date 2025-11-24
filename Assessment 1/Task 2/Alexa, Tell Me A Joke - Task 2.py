@@ -12,22 +12,17 @@ class CodecJokes:
         self.root.geometry("800x400")
         self.root.config(bg="#001100")
 
-        # Initialize Pygame mixer
         pygame.mixer.init()
-        # Background music (loops indefinitely)
         if os.path.exists("BGM.mp3"):
             pygame.mixer.music.load("BGM.mp3")
             pygame.mixer.music.set_volume(0.25)
             pygame.mixer.music.play(-1)
 
-        # Load sound effects
         self.joke_sfx = pygame.mixer.Sound("Codec.wav")
         self.laugh_sfx = pygame.mixer.Sound("Laugh.wav")
-        # Dedicated channels for SFX so BGM isn't interrupted
         self.joke_channel = pygame.mixer.Channel(1)
         self.laugh_channel = pygame.mixer.Channel(2)
 
-        # Load jokes
         try:
             with open("randomJokes.txt", "r", encoding="utf-8") as f:
                 self.jokes = [line.strip() for line in f if line.strip()]
@@ -36,7 +31,6 @@ class CodecJokes:
             self.root.destroy()
             return
 
-        # Load face images
         self.face_images = []
         for i in range(1, 9):
             path = os.path.join("Faces", f"{i}.jpg")
@@ -59,14 +53,12 @@ class CodecJokes:
         padding = 40
         center_width = 800 - left_width - right_width - padding
 
-        # Left frame for caller face
         self.left_frame = tk.Frame(self.root, bg="#001100", width=left_width, height=380)
         self.left_frame.pack(side="left", padx=10, pady=10)
         self.left_frame.pack_propagate(False)
         self.caller_face_label = tk.Label(self.left_frame, bg="#001100")
         self.caller_face_label.pack(expand=True)
 
-        # Right frame for listener (snake) face
         self.right_frame = tk.Frame(self.root, bg="#001100", width=right_width, height=380)
         self.right_frame.pack(side="right", padx=10, pady=10)
         self.right_frame.pack_propagate(False)
@@ -74,7 +66,6 @@ class CodecJokes:
         self.listener_face_label.pack(expand=True)
         self.listener_face_label.image = self.snake_face
 
-        # Center frame for dialogue and buttons
         self.center_frame = tk.Frame(self.root, bg="#001100", width=center_width, height=380)
         self.center_frame.pack(side="left", padx=10, pady=10)
         self.center_frame.pack_propagate(False)
@@ -85,7 +76,6 @@ class CodecJokes:
         )
         self.dialogue_label.pack(fill="both", expand=True, padx=10, pady=10)
 
-        # Button panel
         self.button_frame = tk.Frame(self.center_frame, bg="#001100")
         self.button_frame.pack(pady=5, anchor="nw")
         self.joke_btn = tk.Button(
@@ -135,7 +125,6 @@ class CodecJokes:
             return "Huh?"
 
     def show_joke(self):
-        # Play joke SFX on dedicated channel
         if os.path.exists("Codec.wav"):
             self.joke_channel.play(self.joke_sfx)
 
@@ -164,7 +153,6 @@ class CodecJokes:
 
     def show_punchline(self):
         if self.current_joke and not self.typing_job:
-            # Play laugh SFX on dedicated channel
             if os.path.exists("Laugh.wav"):
                 self.laugh_channel.play(self.laugh_sfx)
             punch_text = f"\nSNAKE:\n{self.snake_dynamic_response}\nCALLER:\n{self.next_punchline}"
@@ -173,4 +161,5 @@ class CodecJokes:
 if __name__ == "__main__":
     root = tk.Tk()
     app = CodecJokes(root)
+
     root.mainloop()
